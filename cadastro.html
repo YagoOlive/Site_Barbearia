@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&family=Nunito:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
+        
+        <script>
+            function redirecionar() {
+              window.location.href = "Login.html";
+            }
+        
+            function cadastrar() {
+              var usuario = document.getElementById("cUsuario").value;
+              var email = document.getElementById("cE-mail").value;
+              var telefone = document.getElementById("cTelefone").value;
+              var senha = document.getElementById("cSenha").value;
+              
+              var mensagemErro = document.getElementById("mensagem-erro");
+        
+              if (usuario === "" || email === "" || telefone === "" || senha === "") {
+                mensagemErro.textContent = "Por favor, preencha todos os campos.";
+                mensagemErro.style.display = "block";
+              } else {
+                redirecionar();
+              }
+            }
+        
+            document.addEventListener("DOMContentLoaded", function() {
+              var botaoCadastro = document.getElementById("btn-cadastro");
+              botaoCadastro.addEventListener("click", function(event) {
+                event.preventDefault();
+                cadastrar();
+              });
+            });
+          </script>
+    </head>
+
+    <style>
+       body{
+         margin: 0;
+         font-family: 'Nunito', sans-serif;
+         background: linear-gradient(to bottom left, #A52A2A, #c23333, #ca2323, #cf1010, #f10505);
+       }
+       .main-login{
+            width: 100vw;
+            height: 100vh;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+       }
+       .titulo{
+            width: 50vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+       }
+       .titulo > h1{
+        color: white;
+       }
+       .formulario{
+            width: 50vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+       }
+       .card-login{
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 35px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(148, 0, 0, 0.6);
+            border-radius: 20px;
+            box-shadow: 0px 10px 40px #00000056;
+       }
+       .card-login > h1{
+            color: white;
+            font-weight: 800;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+       }
+       .botao{
+            color: white;
+            font-weight: 200;
+            margin: 10px;
+            text-decoration: none;
+       }
+       .textfield{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 10px;
+       }
+       .textfield > input{
+       width: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        background-color: brown;
+        color: white;
+        font-size: 12pt;
+        box-shadow: 0px 10px 40px #00000056;
+        outline: none;
+        box-sizing: border-box;
+        backdrop-filter: blur(5px);
+        background-color:#b91c1c;
+       }
+       .textfield > label{
+            color: white;
+            margin-bottom: 10px;
+            
+       }
+       .textfield > input::placeholder{
+        color: white;
+       }
+
+       .checkbox{
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: brown;
+            color: white;
+            font-size: 12pt;
+            box-shadow: 0px 10px 40px #00000056;
+            outline: none;
+            box-sizing: border-box;
+            margin: 10px;
+       }
+       .btn-login{
+            width: 100%;
+            padding: 16px 0px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 3px;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            box-shadow: 0px 10px 40px -12px #fdfcfc56;
+       }
+       .mensagem-erro{
+            margin: 10px;
+            color: white;
+
+       }
+       
+       
+    </style>
+
+    <body>
+
+        
+        <div class="main-login">
+
+            <div class="titulo">
+                <h1>Cadastre-se<br>E conheça nossos serviços</h1>
+
+            </div>
+            <div class="formulario">
+
+                <div class="card-login">
+
+                    <h1><p><b>Cadastre-se</b></p></h1>
+
+                    <form method="post" id="formulario">
+                         
+                        <div class="textfield">
+                            <label for="cUsuario">Usuario:</label>
+                            <input type="text" Email="txtUsuario" id="cUsuario" size="50" maxlength="45" placeholder="Usuario">
+                        </div>
+                        <div class="textfield">
+                            <label for="cE-mail">E-mail:</label>
+                            <input type="text" name="txtE-mail" id="cE-mail" placeholder="E-mail">
+                        </div>
+                        <div class="textfield">
+                            <label for="cTelefone">Telefone:</label>
+                            <input type="text" name="txtTelefone" id="cTelefone" size="13" maxlength="13" placeholder="(XX)X XXXX-XXXX">
+                        </div>
+                        <div class="textfield">
+                            <label for="cSenha">Senha:</label>
+                            <input type="password" name="txtsenha" id="cSenha" size="15" maxlength="8" placeholder="Senha de 8 digitos">
+                        </div>
+                       
+                        <div class="checkbox">
+                            <input type="checkbox" name="txtRecEmail" id="RecEmail" checked />
+                            Gostaria de receber notificações promocionais
+                        </div> 
+                        
+                        
+                        <button id="btn-cadastro" class="btn-login" type="submit">Cadastre-se</button>
+                        <p id="mensagem-erro" class="mensagem-erro"></p>
+                        <a href="Login.html" class="botao">Já tem uma conta? Faça login</a>
+
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+         
+    </body>
