@@ -1,0 +1,232 @@
+:root {
+  /* Cores */
+  --cor-primaria: #8b0000;
+  --cor-secundaria: #461212;
+  --cor-texto: #f8f8f8;
+  --cor-branca: #ffffff;
+  --cor-background: #161b1d;
+  --cor-placeholder: #b5b5b5;
+  --cor-erro: #f8f8f8;
+  --cor-hover: #6a1a1a;
+
+  /* Fontes */
+  --fonte-titulo: "Asap", sans-serif;
+  --fonte-texto: "Nunito", sans-serif;
+  --fonte-destaque: "Yellowtail", serif;
+
+  /* Espaçamentos */
+  --espacamento-pequeno: 10px;
+  --espacamento-medio: 20px;
+  --espacamento-grande: 30px;
+
+  /* Bordas */
+  --borda-arredondada: 10px;
+  --borda-arredondada-grande: 20px;
+
+  /* Sombras */
+  --sombra-padrao: 0px 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset de margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  background: var(--cor-primaria);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout principal */
+.main-login {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espacamento-grande);
+}
+
+/* Título */
+.titulo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.titulo > h1 {
+  color: var(--cor-branca);
+  font-family: var(--fonte-titulo);
+  margin-bottom: var(--espacamento-grande);
+}
+.titulo > a {
+  text-decoration: none;
+  color: var(--cor-branca);
+  font-weight: 800;
+  font-size: 70px;
+  font-family: var(--fonte-destaque);
+  transition: color 0.3s ease;
+}
+
+.titulo > a:hover {
+  color: var(--cor-secundaria);
+}
+
+/* Logo */
+.logo {
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/Oliveira-lg.png");
+  background-size: cover;
+  animation: cortarLogo 2s forwards;
+}
+
+@keyframes cortarLogo {
+  0% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+/* Formulário */
+.formulario {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--espacamento-grande);
+  backdrop-filter: blur(10px);
+  background-color: var(--cor-secundaria);
+  border-radius: var(--borda-arredondada-grande);
+  box-shadow: var(--sombra-padrao);
+}
+
+.card-login > h1 {
+  color: var(--cor-branca);
+  font-weight: 800;
+  margin-bottom: var(--espacamento-medio);
+}
+
+/* Campos de entrada */
+.textfield {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--espacamento-medio);
+}
+
+.textfield > input {
+  width: 100%;
+  border: none;
+  border-radius: var(--borda-arredondada);
+  padding: var(--espacamento-pequeno);
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  font-size: 1rem;
+  box-shadow: var(--sombra-padrao);
+  outline: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textfield > input:hover {
+  background-color: var(--cor-hover);
+}
+
+.textfield > input:focus {
+  box-shadow: 0 0 0 2px var(--cor-branca);
+}
+
+.textfield > input::placeholder {
+  color: var(--cor-placeholder);
+}
+
+.textfield > label {
+  color: var(--cor-branca);
+  margin-bottom: var(--espacamento-pequeno);
+  font-weight: bold;
+}
+
+/* Botão de login */
+.btn-login {
+  width: 100%;
+  padding: var(--espacamento-pequeno) 0;
+  border: none;
+  border-radius: var(--borda-arredondada);
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background-color: var(--cor-branca);
+  color: var(--cor-primaria);
+  cursor: pointer;
+  box-shadow: var(--sombra-padrao);
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: var(--cor-hover);
+  color: var(--cor-branca);
+}
+
+/* Mensagem de erro */
+.mensagem-erro {
+  margin: var(--espacamento-pequeno) 0;
+  color: var(--cor-erro);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Link de cadastro */
+.botao {
+  color: var(--cor-branca);
+  font-weight: 200;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .main-login {
+    flex-direction: column;
+    gap: var(--espacamento-grande);
+    padding: var(--espacamento-medio);
+  }
+
+  .titulo,
+  .formulario {
+    width: 100%;
+  }
+
+  .titulo > h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-login {
+    padding: var(--espacamento-medio);
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+
+    <!-- Fonte do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&family=Nunito:wght@700&family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Arquivo CSS externo -->
+    <link rel="stylesheet" href="css/cadastro.css" />
+  </head>
+  <body>
+    <div class="main-login">
+      <div class="titulo">
+        <a
+          href="../index.html"
+          aria-label="Página inicial da Barbearia Oliveira"
+          >Oliveira Barbearia</a
+        >
+        <h1>Cadastre-se<br />E conheça nossos serviços</h1>
+      </div>
+      <div class="formulario">
+        <div class="card-login">
+          <h1>
+            <p><b>Cadastre-se</b></p>
+          </h1>
+          <form method="post" id="formulario">
+            <div class="textfield">
+              <label for="cUsuario">Usuário:</label>
+              <input
+                type="text"
+                name="txtUsuario"
+                id="cUsuario"
+                size="50"
+                maxlength="45"
+                placeholder="Digite seu nome de usuário"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="textfield">
+              <label for="cE-mail">E-mail:</label>
+              <input
+                type="email"
+                name="txtE-mail"
+                id="cE-mail"
+                placeholder="Digite seu e-mail"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="textfield">
+              <label for="cTelefone">Telefone:</label>
+              <input
+                type="tel"
+                name="txtTelefone"
+                id="cTelefone"
+                size="13"
+                maxlength="13"
+                placeholder="(XX) X XXXX-XXXX"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="textfield">
+              <label for="cSenha">Senha:</label>
+              <input
+                type="password"
+                name="txtSenha"
+                id="cSenha"
+                size="15"
+                maxlength="8"
+                placeholder="Senha de 8 dígitos"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                name="txtRecEmail"
+                id="RecEmail"
+                checked
+                aria-label="Gostaria de receber notificações promocionais"
+              />
+              Gostaria de receber notificações promocionais
+            </div>
+            <button id="btn-cadastro" class="btn-login" type="submit">
+              Cadastre-se
+            </button>
+            <p id="mensagem-erro" class="mensagem-erro" role="alert"></p>
+            <a href="Login.html" class="botao">Já tem uma conta? Faça login</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arquivo JavaScript externo -->
+    <script src="js/cadastro.js"></script>
+  </body>
+</html>

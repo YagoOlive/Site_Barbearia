@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento de Corte de Cabelo</title>
+    <link rel="stylesheet" type="text/css" href="css/agendamento.css" />
+  </head>
+  <body>
+    <div class="agendar">
+      <div class="card-login">
+        <div class="titulo">
+          <h1><b>Agende seu corte!</b></h1>
+        </div>
+        <form id="appointmentForm">
+          <div class="textfield">
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Digite seu nome"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="textfield">
+            <label for="phone">Telefone:</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="(XX) X XXXX-XXXX"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="textfield">
+            <label for="date">Data:</label>
+            <input type="date" id="date" required aria-required="true" />
+          </div>
+
+          <div class="textfield">
+            <label for="time">Horário:</label>
+            <input type="time" id="time" required aria-required="true" />
+          </div>
+
+          <button class="btn-cadastrar" type="submit">Agendar</button>
+          <p id="mensagem-erro" class="mensagem-erro" role="alert"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Spinner de carregamento -->
+    <div id="spinner" style="display: none">Carregando...</div>
+
+    <script src="js/agendamento.js"></script>
+  </body>
+</html>

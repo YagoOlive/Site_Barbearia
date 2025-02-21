@@ -1,64 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>  	
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">  	
-        <title>Barbearia</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&family=Nunito:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="normalize.css"> 
-        <link rel="stylesheet" href="fontawesome-free/css/all.min.css"> 
-         <link rel="stylesheet" href="estilo.css" type="text/css" media="screen">
-         
-        
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Barbearia Oliveira - A melhor barbearia da região, oferecendo cortes de cabelo e barba de alta qualidade em um ambiente aconchegante." />
+    <meta name="keywords" content="barbearia, corte de cabelo, barba, ambiente aconchegante, Oliveira Barbearia" />
 
-    <body>  
-        <nav>  		
-            <a href="#">Oliveira barbearia</a>  
-            <ul>
-                <li><a href="#Sobre">Sobre</a></li>  			
-                <li><a href="#Ambiente">Ambiente</a></li>  			 			
-                <li><a href="cadastro.html">Cadastre-se como cliente</a></li> 
-            </ul>		
-        </nav>
-        
-        <header id="topo">
-            <h1>A melhor Barbearia</h1> 
-            <p>Oliveira Barbearia é uma barbearia fictícia criada para simular o desenvolvimento
-             de uma página web realista e condizente com as necessidades do ramo. A barbearia  
-             oferece serviços para atender aos mais sofisticados cortes de cabelos, além de contar 
-             com ótimos profissionais, dispor de um ambiente aconchegante e confortável onde você 
-             pode aguardar pelo seu corte.</p>
-             <a href="#Serviços" class="botao">Ver mais</a>
-        </header>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Barbearia Oliveira" />
+    <meta property="og:description" content="A melhor barbearia da região, oferecendo cortes de cabelo e barba de alta qualidade em um ambiente aconchegante." />
+    <meta property="og:image" content="assets/images/imagem3.jpg" />
+    <meta property="og:url" content="https://www.barbeariaoliveira.com" />
 
-        <section id="Sobre">
-            <h2>Sobre</h2>
-            <p> A Barbearia Oliveira surgiu coom o intuito de oferecer os melhores cortes da região e
-            satisfazer nossos clientes deixando-os sempre no melhor estilo para impressionar.</p>
-            <a href="#Ambiente" class="botao">Ver mais</a>
-        </section>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 
-        <section id="Ambiente">
-            <h2>Ambiente</h2>
-            <p>Contamos com um ambiente aconchegante onde você pode acompanhar seus jogos favoritos 
-                na Champions League, se divertir na mesa de bilhar tudo isso enquanto aguardar seu corte.</p>
-            <div>
-                <img src="imagem1.jpg" alt="ambiente">
-                <img src="imagem2.jpg" alt="ambiente2">
-                <img src="cadeira.jpg" alt="cadeira">
-                <img src="tesoura.jpeg" alt="tesoura">
-                <img src="barba.webp" alt="barba">
-                <img src="corte.webp" alt="corte">
-            </div>
-        </section>
+    <title>Barbearia Oliveira</title>
 
-        <footer>
-            <a href="#topo" class="botao">Voltar ao topo</a>
-            <p>Entre em contato com a Barbearia Oliveira:<br> <i class="fa-brands fa-whatsapp"></i> <a class="Wpp" href="(35)-984707060">(35)-984707060</a> </p>
-            <p>Site desenvolvido pelo Aluno Yago<br> <i class="fa-brands fa-github"></i> <a href="https://github.com/Yago-Cod">Github-Yago</a></p>
-         
-        </footer>
-    </body>  
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&family=Nunito:wght@700&family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="assets/fonts/fontawesome-free/css/all.min.css"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/estilo.css"
+      type="text/css"
+      media="screen"
+    />
+  </head>
+
+  <body>
+    <!-- Navegação -->
+    <nav role="navigation">
+      <a href="#" aria-label="Página inicial da Barbearia Oliveira">Oliveira Barbearia</a>
+      <ul>
+        <li><a href="#Sobre">Sobre</a></li>
+        <li><a href="#Ambiente">Ambiente</a></li>
+        <li><a href="assets/cadastro.html">Cadastre-se como cliente</a></li>
+      </ul>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header id="topo" role="banner">
+      <h1>A melhor Barbearia</h1>
+      <p>
+        Bem-vindo à Oliveira Barbearia! Nosso compromisso é proporcionar uma
+        experiência de corte de cabelo e barba que une qualidade e sofisticação.
+        Contamos com profissionais altamente qualificados, prontos para oferecer
+        os cortes mais estilosos e modernos, em um ambiente acolhedor e
+        descontraído para você se sentir em casa enquanto aguarda pelo seu
+        atendimento
+      </p>
+      <a href="#Serviços" class="botao" aria-label="Ver mais sobre os serviços"
+        >Ver mais</a
+      >
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main role="main">
+      <!-- Seção Sobre -->
+      <section id="Sobre">
+        <h2>Sobre</h2>
+        <p>
+          Fundada com a missão de elevar o padrão de cortes de cabelo e barba, a
+          Oliveira Barbearia busca sempre surpreender nossos clientes com um
+          atendimento personalizado e resultados impecáveis. Cada detalhe é
+          pensado para garantir que você saia daqui pronto para impressionar e
+          se sentir confiante em qualquer ocasião.
+        </p>
+        <a href="#Ambiente" class="botao" aria-label="Ver mais sobre o ambiente"
+          >Ver mais</a
+        >
+      </section>
+
+      <!-- Seção Ambiente -->
+      <section id="Ambiente">
+        <h2>Ambiente</h2>
+        <p>
+          Na Oliveira Barbearia, o cuidado com seu conforto é tão importante
+          quanto o corte perfeito. Nossa barbearia oferece um espaço acolhedor e
+          moderno, equipado com TVs para você acompanhar seus esportes favoritos
+          e uma mesa de bilhar para tornar a espera ainda mais agradável. Aqui,
+          cada momento é pensado para que você tenha uma experiência completa e
+          relaxante.
+        </p>
+        <div>
+          <img
+            src="assets/images/ambiente1.jpg"
+            alt="Ambiente interno da barbearia"
+          />
+          <img
+            src="assets/images/ambiente2.jpg"
+            alt="Sala de espera com TV e sofá"
+          />
+          <img src="assets/images/cadeira.jpg" alt="Cadeira de barbeiro" />
+          <img src="assets/images/tesoura.jpeg" alt="Tesoura de barbeiro" />
+          <img src="assets/images/barba.webp" alt="Homem fazendo a barba" />
+          <img
+            src="assets/images/corte.webp"
+            alt="Corte de cabelo em andamento"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer role="contentinfo">
+      <a href="#topo" class="botao" aria-label="Voltar ao topo da página"
+        >Voltar ao topo</a
+      >
+      <p>
+        Entre em contato com a Barbearia Oliveira:<br />
+        <i class="fa-brands fa-whatsapp"></i>
+        <a class="Wpp" href="tel:+5535984707060">(35) 98470-7060</a>
+      </p>
+      <p>
+        Site desenvolvido pelo Aluno Yago<br />
+        <i class="fa-brands fa-github"></i>
+        <a
+          href="https://github.com/Yago-Cod"
+          aria-label="Perfil do GitHub do desenvolvedor"
+          >Github-Yago</a
+        >
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
+  </body>
 </html>
