@@ -1,11 +1,31 @@
 :root {
-  --cor-primaria: brown;
-  --cor-secundaria: azure;
-  --cor-texto: #1c1c1c;
-  --cor-branca: white;
+  /* Cores */
+  --cor-primaria: #8b0000;
+  --cor-secundaria: #461212;
+  --cor-texto: #f8f8f8;
+  --cor-texto-secundaria: #000000;
+  --cor-branca: #ffffff;
+  --cor-background: #161b1d;
+  --cor-placeholder: #b5b5b5;
+  --cor-erro: #f8f8f8;
+  --cor-hover: #6a1a1a;
+
+  /* Fontes */
   --fonte-titulo: "Asap", sans-serif;
   --fonte-texto: "Nunito", sans-serif;
   --fonte-destaque: "Yellowtail", serif;
+
+  /* Espaçamentos */
+  --espacamento-pequeno: 10px;
+  --espacamento-medio: 20px;
+  --espacamento-grande: 30px;
+
+  /* Bordas */
+  --borda-arredondada: 10px;
+  --borda-arredondada-grande: 20px;
+
+  /* Sombras */
+  --sombra-padrao: 0px 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos globais */
@@ -151,6 +171,7 @@ header p {
 #Ambiente p {
   margin-bottom: 2.5em;
   max-width: 1000px;
+  color: var(--cor-texto-secundaria);
 }
 #Ambiente div {
   display: flex;
